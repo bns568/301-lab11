@@ -23,13 +23,13 @@ on several rules:
   - no other special characters
   - no subdomains, ports, etc: must be of the form name@place.com, not name@sub.place.com:3000
 
-Return either true or false.
+Return either true or false
 
 Note: if you ever need to validate an email using a regex in practice, the Internet has the actual regex you should use. It's many many lines long.
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
-  // Solution code here...
+  return (/^\w+([.]?\w+)@\w+[.](net|com|org)\b/g).test(email);
 };
 
 /* ------------------------------------------------------------------------------------------------
